@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>¿Qué tipo de jugador eres?</title>
+  <meta name="description" content="Test de tipo de jugador basado en la taxonomía de Bartle (1996). Hecho por [Inserte nombre de equipo] para Computación Visual, UNAL.">
+  <link rel="icon" href="img/sapo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="hud">
+    <span class="tag" id="ptag">P?</span>
+    <span class="hearts" aria-hidden="true"><img src="img/corazon.png" alt=""><img src="img/corazon.png" alt=""><img src="img/corazon.png" alt=""></span>
+    <span id="hudScore">×00</span>
+  </header>
+
+  <main>
+    <!-- INICIO -->
+    <section class="screen on" id="sStart">
+      <h1>¿QUÉ TIPO DE<br>JUGADOR ERES?</h1>
+      <div class="cast" aria-hidden="true">
+        <img src="img/sapo_dorado.png" alt=""><img src="img/sapo.png" alt=""><img src="img/talcual.png" alt=""><img src="img/taxi.png" alt="">
+      </div>
+      <div class="suits" aria-hidden="true">
+        <img src="img/diamante.png" alt=""><img src="img/pica.png" alt=""><img src="img/corazon.png" alt=""><img src="img/trebol.png" alt="">
+      </div>
+      <div class="card">
+        <p class="lead">18 decisiones rápidas.<br>No lo pienses mucho: elige lo primero que te nazca.</p>
+        <label for="apodo">APODO (OPCIONAL, SALE EN LA PANTALLA)</label>
+        <input type="text" id="apodo" maxlength="20" autocomplete="off" placeholder="Ej: ElRolo">
+      </div>
+      <button class="btn big" id="go">START</button>
+      <p class="small center">Basado en la taxonomía de Bartle (1996) y el método de puntuación de Andreasen &amp; Downey.<br>Respuestas anónimas. No guardamos nada más que tu resultado.</p>
+    </section>
+
+    <!-- PREGUNTA -->
+    <section class="screen" id="sQ">
+      <div class="progress" id="prog" aria-hidden="true"></div>
+      <div class="qnum" id="qnum"></div>
+      <div class="card">
+        <p class="qtext" id="qtext"></p>
+      </div>
+      <div class="options" id="opts"></div>
+    </section>
+
+    <!-- RESULTADO -->
+    <section class="screen result" id="sR">
+      <div class="qnum">RESULTADO</div>
+      <div class="card">
+        <img class="hero" id="rSprite" alt="">
+        <div class="type" id="rType"></div>
+        <div class="small" id="rWho"></div>
+        <p class="quote" id="rQuote"></p>
+        <p id="rDetail"></p>
+      </div>
+      <h2 class="center">TU MEZCLA</h2>
+      <div class="bars" id="rBars"></div>
+      <div class="card">
+        <h2 class="center">TU MUNDO</h2>
+        <div class="mundo"><img id="mIcon" alt=""><div><b id="mName"></b><div id="mDesc"></div></div></div>
+        <p class="small">Según los 9 géneros interactivos de Mejías-Climent (2021): se clasifica por las destrezas que usas al jugar.</p>
+      </div>
+      <p class="saved" id="saved"></p>
+      <button class="btn" id="again">JUGAR OTRA VEZ</button>
+      <p class="science">*«Evidencia científica»: la taxonomía de Bartle es un modelo de diseño muy usado, no un diagnóstico psicológico. Nadie es un solo tipo: por eso te damos porcentajes.</p>
+    </section>
+  </main>
+
+  <footer>Hecho con cariño por <b>[Inserte nombre de equipo]</b> · Computación Visual · UNAL · 2026<br>
+    Sprites del Sapo Rolo y el taxi: <a href="https://github.com/trimsucne/RenderCrafting-Toucan">RenderCrafting-Toucan</a> (CC0)</footer>
+
+  <script type="module" src="js/test.js"></script>
+</body>
+</html>

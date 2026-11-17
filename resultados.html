@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Resultados en vivo</title>
+  <link rel="icon" href="img/sapo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="live">
+  <header class="hud">
+    <span class="tag">P3</span>
+    <span id="salaLbl">SALA</span>
+    <span id="modeLbl"></span>
+  </header>
+  <main>
+    <h1>¿CÓMO JUEGA ESTE SALÓN?</h1>
+    <div class="live-grid">
+      <div class="card">
+        <div class="chart" id="chart">
+          <div class="quad" style="left:2%;top:2%"><img src="img/trebol.png" alt=""><span style="color:var(--A)">ASESINOS</span></div>
+          <div class="quad" style="right:2%;top:2%"><img src="img/diamante.png" alt=""><span style="color:var(--T)">TRIUNFADORES</span></div>
+          <div class="quad" style="left:2%;bottom:2%"><img src="img/corazon.png" alt=""><span style="color:var(--S)">SOCIALIZADORES</span></div>
+          <div class="quad" style="right:2%;bottom:2%"><img src="img/pica.png" alt=""><span style="color:var(--E)">EXPLORADORES</span></div>
+          <div class="ax-h"></div><div class="ax-v"></div>
+          <span class="lab" style="left:51.5%;top:1%">ACTUAR ↑</span>
+          <span class="lab" style="right:51.5%;bottom:1%">↓ INTERACTUAR</span>
+          <span class="lab" style="left:1%;top:46%">← JUGADORES</span>
+          <span class="lab" style="right:1%;top:46%">MUNDO →</span>
+        </div>
+      </div>
+      <div>
+        <div class="card">
+          <div class="count" id="count">0</div>
+          <div class="status">JUGADORES</div>
+          <div id="tipos"></div>
+        </div>
+        <div class="card">
+          <h2>MUNDOS (GÉNEROS)</h2>
+          <div id="mundos"></div>
+        </div>
+        <div class="card qr" id="qrBox" hidden>
+          <img id="qrImg" src="img/qr.png" alt="Código QR del test">
+          <div><b style="font-family:var(--title);font-size:13px">¿FALTAS TÚ?</b><br>Escanea y juega.</div>
+        </div>
+        <p class="status" id="status">CONECTANDO…</p>
+      </div>
+    </div>
+  </main>
+  <script type="module" src="js/resultados.js"></script>
+</body>
+</html>
